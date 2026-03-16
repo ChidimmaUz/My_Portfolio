@@ -1,0 +1,634 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.7;
+}
+
+
+.nav {
+    position: fixed;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.hero-role {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.hero-statement {
+    margin-top: 30px;
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+
+.hero-cta {
+    margin-top: 40px;
+}
+
+.btn-primary {
+    background: #111;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.btn-secondary {
+    border: 1px solid #111;
+    padding: 12px 28px;
+    text-decoration: none;
+    color: #111;
+}
+
+.impact {
+    padding: 100px 10%;
+    background: #f7f7f7;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.impact-card h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.expertise {
+    padding: 100px 10%;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.expertise-grid div {
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+.case-section {
+    padding: 100px 10%;
+    background: #fafafa;
+}
+
+.case-item {
+    margin-bottom: 50px;
+}
+
+.case-result {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.philosophy {
+    padding: 50px 10%;
+}
+
+.philosophy-grid {
+    display: grid;
+    gap: 20px;
+}
+
+
+/* ======================== Contact & Footer Styling ======================== */
+/* .contact_container {
+    max-width: 1024px;
+    display: flex;
+    justify-self: center;
+    margin: 0 0 10% 0;
+}
+
+.contact_form {
+    width: 100%;
+    padding: 0 0 10px 0;
+   
+}
+.contact_input {
+    width: 100%;
+    padding: 1rem ;
+    border-radius: 0.5rem;
+    border: 1.5px solid black;
+    margin-bottom: 10px;
+}
+
+.contact_button {
+    display: block;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-left: auto;
+    color:white;
+    background-color:black;
+    min-width: 100px;
+    padding: 10px 0;
+} */
+
+.contact {
+    padding: 10px 10%;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact .contact-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+
+.contact p a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact p a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact p:hover {
+    transform: translateY(-3px);
+}
+
+.contact i {
+    color: #00afff;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Footer */
+.copyright {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Optional subtle separator line above footer */
+.contact::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #00afff;
+    margin: 40px auto 20px auto;
+    border-radius: 2px;
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.stakeholder-grid, .value-grid, .speaking-engagements ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.stakeholder-grid div, .value-grid li, .speaking-engagements li {
+    padding: 15px;
+    border: 1px solid #eee;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.speaking-engagements ul ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.stakeholder, .speaking, .value {
+    padding: 80px 10%;
+}
+.stakeholder{
+    background: #fefefe;
+}
+
+.speaking{
+    background: #fafafa;
+}
+
+
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+/* Underline pseudo-element */
+.section-header h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #00afff; /* Accent color */
+    border-radius: 2px;
+    transition: width 0.6s ease;
+}
+
+/* Active state when visible */
+.section-header h2.underline-visible::after {
+    width: 100%;
+}
+
+
+
+
+
+
+/* Skill Meter Container */
+.skill-meter {
+    margin: 2rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.skill-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Meter Bar */
+.meter {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    border-radius: 12px;
+    background: #ddd;
+    overflow: hidden;
+}
+
+/* Segment Colors (overlay behind fill) */
+.meter-segments {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+}
+
+.meter-segments span {
+    flex: 1;
+    display: block;
+    background: transparent;
+}
+
+/* Fill Bar (animated) */
+.meter-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #ff4d4d, #ff944d, #ffeb4d, #b2ff4d, #33cc33);
+    border-radius: 12px 0 0 12px;
+    z-index: 1;
+}
+
+/* Percentage Label inside */
+.meter-value {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 600;
+    color: #111;
+    z-index: 2;
+}
+
+
+
+/* .impact-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+} */
+
+.expertise-grid div i,
+.case-item h3 i,
+.philosophy-grid div i,
+.skill-label i {
+    margin-right: 8px;
+    color: #2c3e50;
+}
+
+.expertise-grid div,
+.philosophy-grid div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+
+/* ===== Carousel ===== */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    margin-top: 5rem;
+    overflow: hidden;
+    border-radius: 12px;
+    border: solid thick black;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 450px;
+}
+
+/* Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+/* Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.6);
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-dots .active {
+    background: white;
+}
+
+
+
+/* =========================================
+   MOBILE RESPONSIVE STYLING
+========================================= */
+@media (max-width: 768px) {
+
+    /* ===== NAVIGATION ===== */
+    .nav-container {
+        width: 92%;
+    }
+
+    .nav-links {
+        display: none; /* Hide desktop links for now */
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 20px 60px 20px;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-role {
+        font-size: 1rem;
+    }
+
+    .hero-statement {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .hero-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    /* ===== SECTIONS SPACING ===== */
+    .impact,
+    .expertise,
+    .case-section,
+    .stakeholder,
+    .speaking,
+    .value,
+    .philosophy,
+    .contact {
+        padding: 60px 20px;
+    }
+
+    /* ===== IMPACT GRID ===== */
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .impact-card h2 {
+        font-size: 2rem;
+    }
+
+    /* ===== EXPERTISE GRID ===== */
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ===== STAKEHOLDER / VALUE GRID ===== */
+    .stakeholder-grid,
+    .value-grid,
+    .speaking-engagements ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* ===== CASE ITEMS ===== */
+    .case-item {
+        margin-bottom: 40px;
+    }
+
+    .case-item h3 {
+        font-size: 1.1rem;
+    }
+
+    /* ===== CAROUSEL ===== */
+    .carousel {
+        margin-top: 3rem;
+        border-width: 2px;
+    }
+
+    .carousel img {
+        height: 250px;
+    }
+
+    .carousel-btn {
+        padding: 8px 10px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact p {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 1rem;
+    }
+
+    .contact .contact-info {
+        align-items: center;
+    }
+
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .impact-card h2 {
+        font-size: 1.7rem;
+    }
+
+    .carousel img {
+        height: 200px;
+    }
+
+}
